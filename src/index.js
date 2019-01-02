@@ -1,12 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import LoginComponent from './components/loginComponent'
+import LoginSuccessComponent from './components/loginSuccessComponent'
+import './index.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends Component {
+    state = {
+        page: 0
+    }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    
+
+    setPage(page) {
+        let state = this.state;
+        state.page = page;
+        this.setState(state);
+    }
+
+
+    getStage() {
+        switch (this.state.page) {
+            case 0: {
+                return <LoginComponent setPage={() => this.setPage(1)}/>
+            }
+
+            case 1: {
+                return <LoginSuccessComponent setPage={() => this.setPage(0)}/>
+            }
+
+            case 2: {
+
+            }
+
+            case 3: {
+
+            }
+
+            default: {
+                alert("Couldn't determine which page to show.");
+                return;
+            }
+        }
+    }
+
+    render() { 
+        return (this.getStage());
+    }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+ 
