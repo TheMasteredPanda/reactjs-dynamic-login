@@ -61,7 +61,8 @@ body {
   padding: 5px;
   padding-left: 10px; }
 #loginBox .incorrect-login {
-  animation: 2s linear failed-input; }
+  animation: 5s linear failed-input;
+  border: 5px soid red; }
 
 @keyframes failed-input {
   0%, 100% {

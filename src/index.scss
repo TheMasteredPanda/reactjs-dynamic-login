@@ -103,7 +103,8 @@ body {
 
     .incorrect-login {
         @extend .input;
-        animation: 2s linear failed-input;
+        animation: 5s linear failed-input;
+        border: 5px soid red;
     }
 }
 

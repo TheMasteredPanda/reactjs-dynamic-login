@@ -11,6 +11,7 @@ class LoginComponent extends Component {
 
         if (passwordInput.innerHTML != "test") {
             passwordInput.classList.add("incorrect-login");
+            // this.forceUpdate();
             alert("Incorrect password.");
         } else {
             alert("Correct password.");
