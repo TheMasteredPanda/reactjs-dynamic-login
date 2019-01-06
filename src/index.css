@@ -17,7 +17,8 @@ body {
   .box .title {
     text-align: center;
     margin: 0 auto;
-    width: 50%; }
+    width: 50%;
+    position: absolute; }
   .box .input {
     margin: 4px auto;
     width: 70%;
@@ -25,7 +26,8 @@ body {
     display: block;
     border: 2px solid #ce09ff;
     padding: 5px;
-    padding-left: 10px; }
+    padding-left: 10px;
+    position: absolute; }
   .box #buttonWrapper {
     text-align: center; }
   .box .button {
@@ -55,11 +57,14 @@ body {
     margin-top: 10px; }
 
 #loginBox .title:nth-child(1) {
-  margin-bottom: 10px; }
+  left: 0;
+  right: 0;
+  top: 25px; }
 #loginBox .title:nth-child(3) {
-  margin-bottom: 10px;
-  margin-top: 10px; }
-#loginBox .incorrect-login {
+  left: 0;
+  right: 0;
+  top: 150px; }
+#loginBox .incorrect {
   margin: 4px auto;
   width: 70%;
   height: 15%;
@@ -67,14 +72,24 @@ body {
   padding: 5px;
   padding-left: 10px;
   border: 2px solid red;
-  animation: move 10s steps(10) infinite alternate; }
+  animation: shake 0.5s; }
+#loginBox #passwordBox {
+  left: 0;
+  right: 0;
+  bottom: 80px; }
+#loginBox #usernameBox {
+  left: 0;
+  right: 0;
+  top: 65px; }
+#loginBox #loginButton {
+  bottom: 10px; }
 
-@keyframes move {
-  from {
-    top: 0;
-    left: 0; }
-  to {
-    top: 100px;
-    left: 100px; } }
+@keyframes shake {
+  0%, 100% {
+    left: 0px; }
+  20% , 60% {
+    left: 30px; }
+  40% , 80% {
+    left: -30px; } }
 
 /*# sourceMappingURL=index.css.map */
