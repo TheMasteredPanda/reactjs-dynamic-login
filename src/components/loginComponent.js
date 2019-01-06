@@ -29,7 +29,7 @@ class LoginComponent extends Component {
             <h2 className="title">Username</h2>
             <input type="text" placeholder="Username" className="input"/>
             <h2 className="title">Password</h2>
-            <input id="passwordInput" placeholder="Password" className={["input", this.state.incorrect && " incorrect-login"].filter(Boolean)} type="password"/>
+            <input id="passwordInput" placeholder="Password" className={`input ${this.state.incorrect ? 'incorrect-login' : ''}`} type="password"/>
             {/* <a href="#">Forgot Password?</a> */}
             <button className="button" id="login" onClick={() => {this.onLoginButtonClick()}}>Login</button>
         </div>);

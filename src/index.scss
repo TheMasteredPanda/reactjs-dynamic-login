@@ -106,11 +106,12 @@ body {
         padding: 5px;
         padding-left: 10px;
         border: 2px solid red;
-        animation: move 10s steps(10) infinite alternate;
+        animation: move 10s;
     }
 }
 
 @keyframes move {
-    from { top: 0; left: 0; }
-    to   { top: 100px; left: 100px; }
+    0%, 100% { left: 0px;}
+    20% , 60%{left: 15px;}
+    40% , 80%{left: -15px;}
   }
